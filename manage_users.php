@@ -74,7 +74,7 @@ require_once("header.php");
                                                                     <td>
                                                                         <div class="btn-list">
                                                                             <a href="edit_user.php?id='.$rec['id'].'"><button id="bEdit" type="button" class="btn btn-sm btn-primary"><span class="fa fa-edit"></span></button></a>
-                                                                            <a href=""><button id="bDelete" type="button" class="btn btn-sm btn-primary"><span class="fa fa-trash"></span></button></a>
+                                                                            <a href="delete_user_record.php?id='.$rec['id'].'"><button id="bDelete" type="button" class="btn btn-sm btn-primary"><span class="fa fa-trash"></span></button></a>
                                                                         </div>
                                                                     </td>
                                                                 </tr>';
