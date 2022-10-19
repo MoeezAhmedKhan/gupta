@@ -782,7 +782,7 @@
                                 </div>
                             </div>
                             <div class="demo-icon nav-link icon">
-                                <i class="fa fa-settings fa-spin  text_primary"></i>
+                                <i class="fa fa-cog fa-spin text_primary"></i>
                             </div>
                         </div>
                     </div>
