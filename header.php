@@ -27,7 +27,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="assets/images/brand/favicon.ico" />
 
 		<!-- TITLE -->
-		<title>Sash – PHP Bootstrap 5 Admin & Dashboard Template</title>
+		<title>Dashboard</title>
 
 		<!-- BOOTSTRAP CSS -->
 		<link id="style" href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />

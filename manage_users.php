@@ -55,27 +55,40 @@ require_once("header.php");
 
                                         <?php
                                                require_once("connection.php");
-                                               $sql = "select * from users";
+                                               $sql = "select * from users where role_id != '0'";
                                                $exec = mysqli_query($conn,$sql);
                                                $num = mysqli_num_rows($exec);
-                                               if($num)
-                                        ?>
+                                               if($num > 0)
+                                               {
+                                                    while($rec = mysqli_fetch_array($exec))
+                                                    {
+                                                        
+                                                         echo '<tr>
+                                                                    <td>'.$rec['id'].'</td>
+                                                                    <td>'.$rec['role_id'].'</td>
+                                                                    <td>'.$rec['status'].'</td>
+                                                                    <td>'.$rec['full_name'].'</td>
+                                                                    <td>'.$rec['email'].'</td>
+                                                                    <td>'.$rec['phone_number'].'</td>
+                                                                    <td>'.$rec['password'].'</td>
+                                                                    <td>
+                                                                        <div class="btn-list">
+                                                                            <a href="edit_user.php?id='.$rec['id'].'"><button id="bEdit" type="button" class="btn btn-sm btn-primary"><span class="fa fa-edit"></span></button></a>
+                                                                            <a href=""><button id="bDelete" type="button" class="btn btn-sm btn-primary"><span class="fa fa-trash"></span></button></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>';
+                                                    }
 
-                                        <tr>
-                                            <td>Bella</td>
-                                            <td>Chloe</td>
-                                            <td>System Developer</td>
-                                            <td>2018/03/12</td>
-                                            <td>$654,765</td>
-                                            <td>b.Chloe@datatables.net</td>
-                                            <td>$654,765</td>
-                                            <td>
-                                                <div class="btn-list">
-                                                    <button id="bEdit" type="button" class="btn btn-sm btn-primary"><span class="fa fa-edit"></span></button>
-                                                    <button id="bDelete" type="button" class="btn btn-sm btn-primary"><span class="fa fa-trash"></span></button>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                                }
+                                                else
+                                                {
+                                                    echo '<tr>
+                                                            <td class"text-center">No Record Found</td>
+                                                         </tr>';
+                                                }
+
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
