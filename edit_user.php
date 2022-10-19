@@ -34,8 +34,10 @@ require_once("header.php");
                             <?php
 
                                     require_once("connection.php");
-                                    $Id = $_POST["id"];
-                                    $select = "select * from users where";
+                                    $Id = $_GET["id"];
+                                    $select = "SELECT * FROM `users` WHERE id = '$Id'";
+                                    $exec = mysqli_query($conn,$select);
+                                    $rec = mysqli_fetch_array($exec);
 
                             ?>
 
@@ -45,34 +47,72 @@ require_once("header.php");
                                             <h3 class="card-title">Edit</h3>
                                         </div>
                                         <div class="card-body">
-                                            <form>
+                                            <form action="" method="POST">
+                                            <div class="form-row">
+                                                    <div class="col-xl-6 mb-3">
+                                                        <label for="validationDefault01">Id</label>
+                                                        <input type="text" class="form-control" id="validationDefault01" value="<?php echo "$rec[id]" ?>" readonly>
+                                                    </div>
+                                                    <div class="col-xl-6 mb-3">
+                                                        <label for="validationDefault02">Role Id</label>
+                                                        <input type="text" class="form-control" name="role" id="validationDefault02" value="<?php echo "$rec[role_id]" ?>" required>
+                                                    </div>
+                                                </div>
                                                 <div class="form-row">
                                                     <div class="col-xl-6 mb-3">
                                                         <label for="validationDefault01">Full name</label>
-                                                        <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                                                        <input type="text" class="form-control" name="name" id="validationDefault01" value="<?php echo "$rec[full_name]" ?>" required>
                                                     </div>
                                                     <div class="col-xl-6 mb-3">
                                                         <label for="validationDefault02">Email</label>
-                                                        <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                                                        <input type="text" class="form-control" name="email" id="validationDefault02" value="<?php echo "$rec[email]" ?>" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col-xl-6 mb-3">
                                                         <label for="validationDefault03">Phone</label>
-                                                        <input type="text" class="form-control" id="validationDefault03" required>
+                                                        <input type="text" class="form-control" name="phone" id="validationDefault03" value="<?php echo "$rec[phone_number]" ?>"  required>
                                                     </div>
                                                     <div class="col-xl-6 mb-3">
                                                         <label for="validationDefault03">Password</label>
-                                                        <input type="text" class="form-control" id="validationDefault03" required>
+                                                        <input type="text" class="form-control" name="password" id="validationDefault03" value="<?php echo "$rec[password]" ?>" required>
                                                     </div>
                                                 </div>
                                             
-                                                <button class="btn btn-primary" type="submit">Submit form</button>
+                                                <button class="btn btn-primary" type="submit" name="update_btn_user">Update </button>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
                                 
+                                <?php
+
+                                        if(isset($_POST["update_btn_user"]))
+                                        {
+                                            $role = $_POST["role"];
+                                            $name = $_POST["name"];
+                                            $email = $_POST["email"];
+                                            $phone = $_POST["phone"];
+                                            $password = $_POST["password"];
+
+                                            $update = "UPDATE `users` SET `role_id`='$role',`full_name`='$name',
+                                            `email`='$email',`phone_number`='$phone',`password`='$password' WHERE id = '$Id'";
+                                            $update_excec = mysqli_query($conn,$update);
+                                            if($update_excec)
+                                            {
+                                                ?>
+                                                    <script>
+                                                        alert("Record has been updated");window.location.href = "manage_users.php";
+                                                    </script>
+                                                <?php
+                                            }
+                                            else
+                                            {
+                                                echo mysqli_error($conn);
+                                            }
+                                        }
+
+                                ?>
                                 
                             </div>
                             <!-- ROW CLOSED -->
