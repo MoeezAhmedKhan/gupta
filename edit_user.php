@@ -111,7 +111,6 @@ require_once("header.php");
                                                 echo mysqli_error($conn);
                                             }
                                         }
-                                        // jkhasdij
 
                                 ?>
                                 
