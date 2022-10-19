@@ -77,6 +77,14 @@ require_once("header.php");
                                                         <label for="validationDefault03">Password</label>
                                                         <input type="text" class="form-control" name="password" id="validationDefault03" value="<?php echo "$rec[password]" ?>" required>
                                                     </div>
+                                                    <div class="col-xl-12 mb-3">
+                                                    <label for="validationDefault04">Status</label>
+                                                        <select class="form-select form-control" name="status" id="validationDefault04" required>
+                                                            <option selected disabled value="">Select</option>
+                                                            <option value="active" <?php if($rec["status"] == "active"){echo "selected";} ?> >active</option>
+                                                            <option value="deactivate" <?php if($rec["status"] == "deactivate"){echo "selected";} ?> >deactivate</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             
                                                 <button class="btn btn-primary" type="submit" name="update_btn_user">Update </button>
@@ -94,8 +102,9 @@ require_once("header.php");
                                             $email = $_POST["email"];
                                             $phone = $_POST["phone"];
                                             $password = $_POST["password"];
+                                            $status = $_POST["status"];
 
-                                            $update = "UPDATE `users` SET `role_id`='$role',`full_name`='$name',
+                                            $update = "UPDATE `users` SET `role_id`='$role',`status`='$status',`full_name`='$name',
                                             `email`='$email',`phone_number`='$phone',`password`='$password' WHERE id = '$Id'";
                                             $update_excec = mysqli_query($conn,$update);
                                             if($update_excec)
