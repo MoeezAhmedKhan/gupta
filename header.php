@@ -388,7 +388,7 @@
 			<div class="app-header header sticky">
                 <div class="container-fluid main-container">
                     <div class="d-flex">
-                        <a aria-label="Hide Sidebar" class="fa fa-circle" data-bs-toggle="sidebar" href="javascript:void(0)"></a>
+                        <a aria-label="Hide Sidebar" class="fa-solid fa-bars" data-bs-toggle="sidebar" href="javascript:void(0)"></a>
                         <!-- sidebar-toggle-->
                         <a class="logo-horizontal" href="index.php">
                             <img src="assets/images/brand/logo.png" class="header-brand-img desktop-logo" alt="logo">
