@@ -65,6 +65,7 @@
         color: #fff !important;
         border-color: #E82646 !important;
     }
+   
 </style>
 
     </head>
@@ -388,9 +389,9 @@
 			<div class="app-header header sticky">
                 <div class="container-fluid main-container">
                     <div class="d-flex">
-                        <a aria-label="Hide Sidebar" class="fa-solid fa-bars" data-bs-toggle="sidebar" href="javascript:void(0)"></a>
+                        <a aria-label="Hide Sidebar" data-bs-toggle="sidebar" href="javascript:void(0)"><i class="fa-solid fa-bars"></i></a>
                         <!-- sidebar-toggle-->
-                        <a class="logo-horizontal" href="index.php">
+                        <a href="index.php" style="position:relative;left:120px">
                             <img src="assets/images/brand/logo.png" class="header-brand-img desktop-logo" alt="logo">
                             <img src="assets/images/brand/logo-3.png" class="header-brand-img light-logo1"
                                 alt="logo">
@@ -419,7 +420,7 @@
                                 data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent-4"
                                 aria-controls="navbarSupportedContent-4" aria-expanded="false"
                                 aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon fa fa-more-vertical"></span>
+                                <span class="navbar-toggler-icon fa-solid fa-ellipsis-vertical"></span>
                             </button>
                             <div class="navbar navbar-collapse responsive-navbar p-0">
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
@@ -637,7 +638,7 @@
                                         <!-- NOTIFICATIONS -->
                                         <div class="dropdown  d-flex message">
                                             <a class="nav-link icon text-center" data-bs-toggle="dropdown">
-                                                <i class="fa fa-message-square"></i><span class="pulse-danger"></span>
+                                                <i class="fa-regular fa-message"></i><span class="pulse-danger"></span>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                                 <div class="drop-heading border-bottom">
