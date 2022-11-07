@@ -55,7 +55,7 @@ require_once("header.php");
                                                     </div>
                                                     <div class="col-xl-6 mb-3">
                                                         <label for="validationDefault02">Role Id</label>
-                                                        
+                                                        <input type="text" class="form-control" name="role" id="validationDefault02" value="<?php echo "$rec[role_id]" ?>" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
