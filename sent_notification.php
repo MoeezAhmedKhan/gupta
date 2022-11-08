@@ -111,8 +111,8 @@ require_once("header.php");
                                 <div class="col-md-6 mt-5">
                                     <div class="form-group">
                                          <div class="control">
-                                            <select name="purpose" class="form-control">
-                                                <option>Select</option>
+                                            <select name="purpose" class="form-control" required>
+                                                <option disabled>Select</option>
                                                 <option value="info">info</option>
                                                 <option value="Promotion">Promotion</option>
                                             </select>
@@ -123,7 +123,7 @@ require_once("header.php");
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <div class="control" id="text_for_option1">
-                                            <textarea  name="content" class="form-control" cols="30" rows="10" placeholder="Enter Notification Text"></textarea>
+                                            <textarea  name="content" class="form-control" cols="30" rows="10" placeholder="Enter Notification Text" required></textarea>
                                         </div>
                                     </div>
                                 </div>
