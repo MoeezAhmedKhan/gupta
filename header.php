@@ -51,6 +51,13 @@
 
         <link rel="stylesheet" href="assets/fontawesome-free-6.2.0-web/css/all.css">
 
+        <link rel="stylesheet" href="assets/DataTable/DataTables-1.12.1/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="assets/DataTable/DataTables-1.12.1/css/dataTables.bootstrap5.min.css">
+
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+
 
         <style>
     #bEdit
@@ -831,7 +838,7 @@
                                 <a class="side-menu__item" href="manage_users.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Manage Users</span></a>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" href="sent_notification.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Sent Notification</span></a>
+                                <a class="side-menu__item" href="sent_notification.php"><i class="side-menu__icon fas fa-bell"></i><span class="side-menu__label">Sent Notification</span></a>
                             </li>
 
 

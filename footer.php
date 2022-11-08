@@ -576,6 +576,41 @@
 		<!-- SWITCHER JS -->
 		<script src="assets/switcher/js/switcher.js"></script>
 
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/DataTable/DataTables-1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="assets/DataTable/DataTables-1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+
+
+        <!-- <script>
+        $(document).ready(function(){
+        $("#example").DataTable();
+        });
+        </script> -->
+
+        <script>
+            
+            $(document).ready(function() {
+            $('#example').DataTable
+            ({
+                dom: 'Bfrtip',
+                buttons: 
+                [
+                    'copyHtml5',
+                    'excelHtml5',
+                    'csvHtml5',
+                    'pdfHtml5'
+                ]
+             });
+        });
+
+       </script>
+
     </body> 
 
 </html>

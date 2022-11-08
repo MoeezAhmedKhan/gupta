@@ -38,7 +38,7 @@ require_once("header.php");
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered border text-nowrap mb-0" id="basic-edit">
+                                <table id="example" class="table table-bordered border text-nowrap mb-0 display nowrap" id="basic-edit">
                                     <thead>
                                         <tr>
                                             <td>Id</td>

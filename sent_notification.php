@@ -39,7 +39,7 @@ require_once("header.php");
                         <div class="card-body">
                             <div class="table-responsive">
                                 <form action="phpfiles/insertions.php" method="post">
-                                <table class="table table-bordered border text-nowrap mb-0" id="basic-edit">
+                                <table id="example" class="table table-bordered border text-nowrap mb-0 display nowrap" style="width:100%" id="basic-edit">
                                     <thead>
                                         <tr>
                                             <th></th>
@@ -51,14 +51,13 @@ require_once("header.php");
                                             <th>Full name</th>
                                             <th>email</th>
                                             <th>Phone</th>
-                                            <th>Password</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
                                         <?php
                                                require_once("connection.php");
-                                               $sql = "select * from users where role_id != '0'";
+                                               $sql = "select * from users where role_id != '0' and status = 'active'";
                                                $exec = mysqli_query($conn,$sql);
                                                $num = mysqli_num_rows($exec);
                                                $index = 0;
@@ -77,7 +76,6 @@ require_once("header.php");
                                                                     <td>'.$rec['full_name'].'</td>
                                                                     <td>'.$rec['email'].'</td>
                                                                     <td>'.$rec['phone_number'].'</td>
-                                                                    <td>'.$rec['password'].'</td>
                                                                 </tr>';
                                                         $index++;
                                                     }
@@ -92,20 +90,6 @@ require_once("header.php");
 
                                         ?>
                                     </tbody>
-                                    <tfoot>
-                                    <tr>
-                                            <td></td>
-                                            <td>Check Item</td>
-                                            <th>S no.</th>
-                                            <td>Id</td>
-                                            <td>Role Id</td>
-                                            <td>Status</td>
-                                            <th>Full name</th>
-                                            <th>email</th>
-                                            <th>Phone</th>
-                                            <th>Password</th>
-                                        </tr>
-                                    </tfoot>
                                 </table>
                                 
                                 <div class="col-md-6 mt-5">
@@ -141,21 +125,6 @@ require_once("header.php");
     </div>
 </div>
 <!-- MAIN-CONTENT CLOSED-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

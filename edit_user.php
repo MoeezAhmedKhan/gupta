@@ -82,7 +82,7 @@ require_once("header.php");
                                                         <select class="form-select form-control" name="status" id="validationDefault04" required>
                                                             <option selected disabled value="">Select</option>
                                                             <option value="active" <?php if($rec["status"] == "active"){echo "selected";} ?> >active</option>
-                                                            <option value="deactivate" <?php if($rec["status"] == "deactivate"){echo "selected";} ?> >deactivate</option>
+                                                            <option value="deactive" <?php if($rec["status"] == "deactive"){echo "selected";} ?> >deactive</option>
                                                         </select>
                                                     </div>
                                                 </div>
