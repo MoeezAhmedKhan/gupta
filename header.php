@@ -830,6 +830,9 @@
                             <li class="slide">
                                 <a class="side-menu__item" href="manage_users.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Manage Users</span></a>
                             </li>
+                            <li class="slide">
+                                <a class="side-menu__item" href="sent_notification.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Sent Notification</span></a>
+                            </li>
 
 
                              <!-- my list -->
