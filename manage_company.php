@@ -19,11 +19,11 @@ require_once("header.php");
 
             <!-- PAGE-HEADER -->
             <div class="page-header">
-                <h1 class="page-title">Manage Users</h1>
+                <h1 class="page-title">Manage Company</h1>
                 <div>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Manage Users</li>
+                        <li class="breadcrumb-item active" aria-current="page">Manage Company</li>
                     </ol>
                 </div>
             </div>
@@ -56,7 +56,7 @@ require_once("header.php");
 
                                         <?php
                                                require_once("connection.php");
-                                               $sql = "select * from users where role_id != '0' and role_id = '2'";
+                                               $sql = "select * from users where role_id != '0' and role_id = '1'";
                                                $exec = mysqli_query($conn,$sql);
                                                $num = mysqli_num_rows($exec);
                                                $index = 0;
@@ -77,8 +77,8 @@ require_once("header.php");
                                                                     <td>'.$rec['password'].'</td>
                                                                     <td>
                                                                         <div class="btn-list">
-                                                                            <a href="edit_user.php?id='.$rec['id'].'"><button id="bEdit" type="button" class="btn btn-sm btn-primary"><span class="fa fa-edit"></span></button></a>
-                                                                            <a href="delete_user_record.php?id='.$rec['id'].'"><button id="bDelete" type="button" class="btn btn-sm btn-primary"><span class="fa fa-trash"></span></button></a>
+                                                                            <a href="edit_company.php?id='.$rec['id'].'"><button id="bEdit" type="button" class="btn btn-sm btn-primary"><span class="fa fa-edit"></span></button></a>
+                                                                            <a href="delete_company_record.php?id='.$rec['id'].'"><button id="bDelete" type="button" class="btn btn-sm btn-primary" onclick="ConfirmDelete()"><span class="fa fa-trash"></span></button></a>
                                                                         </div>
                                                                     </td>
                                                                 </tr>';
@@ -109,10 +109,6 @@ require_once("header.php");
     </div>
 </div>
 <!-- MAIN-CONTENT CLOSED-->
-
-
-
-
 
 
 

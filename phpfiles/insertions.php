@@ -1,9 +1,12 @@
 <?php
 
+    require_once("../connection.php");
+
+
+    // sent_notification.php
 
     if(isset($_POST["BtnSendpush"]))
     {
-        require_once("../connection.php");
         $user_id = $_POST["user_id"];
         $check = $_POST["checkbox"];
         $purpose = $_POST["purpose"];
@@ -60,6 +63,92 @@
         <?php
 
     }
+
+
+
+    // create_company_profile.php
+
+    if(isset($_POST["craete_company_profile_btn"]))
+    {
+        $fname = $_POST["fname"];
+        $email = $_POST["email"];
+        $phone = $_POST["phone"];
+        $password = $_POST["password"];
+
+        $insert = "INSERT INTO `users`(`role_id`,`full_name`, `email`, `phone_number`, `password`) 
+        VALUES (1,'$fname','$email','$phone','$password')";
+        $excec = mysqli_query($conn,$insert);
+        if($excec)
+        {
+            ?>
+                <script>
+                    alert("Record has been Inserted");window.location.href = "../create_company_account.php";
+                </script>
+            <?php
+        }
+        else
+        {
+            echo mysqli_error($conn);
+        }
+        
+
+    }
+
+
+
+     // create_user_profile.php
+
+     if(isset($_POST["craete_user_profile_btn"]))
+     {
+         $fname = $_POST["fname"];
+         $email = $_POST["email"];
+         $phone = $_POST["phone"];
+         $password = $_POST["password"];
+ 
+         $insert = "INSERT INTO `users`(`role_id`,`full_name`, `email`, `phone_number`, `password`) 
+         VALUES (2,'$fname','$email','$phone','$password')";
+         $excec = mysqli_query($conn,$insert);
+         if($excec)
+         {
+             ?>
+                 <script>
+                     alert("Record has been Inserted");window.location.href = "../create_company_user.php";
+                 </script>
+             <?php
+         }
+         else
+         {
+             echo mysqli_error($conn);
+         }
+         
+ 
+     }
+
+
+
+     // add_skills_btn.php
+
+     if(isset($_POST["add_skills_btn"]))
+     {
+         $skill = $_POST["skill"];
+ 
+         $insert = "INSERT INTO `skills`(`skill_name`) VALUES ('$skill')";
+         $excec = mysqli_query($conn,$insert);
+         if($excec)
+         {
+             ?>
+                 <script>
+                     alert("Record has been Inserted");window.location.href = "../add_skills.php";
+                 </script>
+             <?php
+         }
+         else
+         {
+             echo mysqli_error($conn);
+         }
+         
+ 
+     }
 
 
 

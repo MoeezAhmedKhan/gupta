@@ -19,11 +19,11 @@ require_once("header.php");
 
             <!-- PAGE-HEADER -->
             <div class="page-header">
-                <h1 class="page-title">Manage Users</h1>
+                <h1 class="page-title">Manage Skills</h1>
                 <div>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Manage Users</li>
+                        <li class="breadcrumb-item active" aria-current="page">Manage Skills</li>
                     </ol>
                 </div>
             </div>
@@ -43,12 +43,8 @@ require_once("header.php");
                                         <tr>
                                             <th>S no.</th>
                                             <td>Id</td>
-                                            <td>Role Id</td>
-                                            <td>Status</td>
-                                            <th>Full name</th>
-                                            <th>email</th>
-                                            <th>Phone</th>
-                                            <th>Password</th>
+                                            <th>Skills name</th>
+                                            <th>Created At</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -56,7 +52,7 @@ require_once("header.php");
 
                                         <?php
                                                require_once("connection.php");
-                                               $sql = "select * from users where role_id != '0' and role_id = '2'";
+                                               $sql = "SELECT `skill_id`, `skill_name`, `created_at` FROM `skills`";
                                                $exec = mysqli_query($conn,$sql);
                                                $num = mysqli_num_rows($exec);
                                                $index = 0;
@@ -68,17 +64,13 @@ require_once("header.php");
                                                         
                                                          echo '<tr>
                                                                     <td>'.$sn.'</td>
-                                                                    <td>'.$rec['id'].'</td>
-                                                                    <td>'.$rec['role_id'].'</td>
-                                                                    <td>'.$rec['status'].'</td>
-                                                                    <td>'.$rec['full_name'].'</td>
-                                                                    <td>'.$rec['email'].'</td>
-                                                                    <td>'.$rec['phone_number'].'</td>
-                                                                    <td>'.$rec['password'].'</td>
+                                                                    <td>'.$rec['skill_id'].'</td>
+                                                                    <td>'.$rec['skill_name'].'</td>
+                                                                    <td>'.$rec['created_at'].'</td>
                                                                     <td>
                                                                         <div class="btn-list">
-                                                                            <a href="edit_user.php?id='.$rec['id'].'"><button id="bEdit" type="button" class="btn btn-sm btn-primary"><span class="fa fa-edit"></span></button></a>
-                                                                            <a href="delete_user_record.php?id='.$rec['id'].'"><button id="bDelete" type="button" class="btn btn-sm btn-primary"><span class="fa fa-trash"></span></button></a>
+                                                                            <a href="edit_skill.php?id='.$rec['skill_id'].'"><button id="bEdit" type="button" class="btn btn-sm btn-primary"><span class="fa fa-edit"></span></button></a>
+                                                                            <a href="delete_skill.php?id='.$rec['skill_id'].'"><button id="bDelete" type="button" class="btn btn-sm btn-primary" onclick="ConfirmDelete()"><span class="fa fa-trash"></span></button></a>
                                                                         </div>
                                                                     </td>
                                                                 </tr>';
@@ -109,10 +101,6 @@ require_once("header.php");
     </div>
 </div>
 <!-- MAIN-CONTENT CLOSED-->
-
-
-
-
 
 
 

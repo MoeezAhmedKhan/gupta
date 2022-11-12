@@ -830,15 +830,34 @@
 
                              <!-- my list -->
 
+                             <li class="sub-category">
+                                <h3>Create</h3>
+                            </li>
+                            <li class="slide">
+                                <a class="side-menu__item" href="create_company_account.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Company account</span></a>
+                            </li>
+                            <li class="slide">
+                                <a class="side-menu__item" href="create_user_account.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">User Account</span></a>
+                            </li>
+                            <li class="slide">
+                                <a class="side-menu__item" href="add_skills.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Add Skills</span></a>
+                            </li>
+
                             
                              <li class="sub-category">
                                 <h3>View The Details</h3>
                             </li>
                             <li class="slide">
+                                <a class="side-menu__item" href="sent_notification.php"><i class="side-menu__icon fas fa-bell"></i><span class="side-menu__label">Sent Notification</span></a>
+                            </li>
+                            <li class="slide">
+                                <a class="side-menu__item" href="manage_company.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Manage Comapnys</span></a>
+                            </li>
+                            <li class="slide">
                                 <a class="side-menu__item" href="manage_users.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Manage Users</span></a>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" href="sent_notification.php"><i class="side-menu__icon fas fa-bell"></i><span class="side-menu__label">Sent Notification</span></a>
+                                <a class="side-menu__item" href="manage_skills.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Manage Skills</span></a>
                             </li>
 
 

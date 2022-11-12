@@ -18,11 +18,11 @@ require_once("header.php");
 
                             <!-- PAGE-HEADER -->
                             <div class="page-header">
-                                <h1 class="page-title">User Edit</h1>
+                                <h1 class="page-title">Company Edit</h1>
                                 <div>
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">User Edit</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Company Edit</li>
                                     </ol>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@ require_once("header.php");
                                                     </div>
                                                     <div class="col-xl-6 mb-3">
                                                         <label for="validationDefault02">Role Id</label>
-                                                        <input type="text" class="form-control" name="role" id="validationDefault02" value="<?php echo "$rec[role_id]" ?>" required>
+                                                        <input type="text" class="form-control" name="role" id="validationDefault02" value="<?php echo "$rec[role_id]" ?>" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
@@ -87,7 +87,7 @@ require_once("header.php");
                                                     </div>
                                                 </div>
                                             
-                                                <button class="btn btn-primary" type="submit" name="update_btn_user">Update </button>
+                                                <button class="btn btn-primary" type="submit" name="update_btn_comapny">Update </button>
                                             </form>
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@ require_once("header.php");
                                 
                                 <?php
 
-                                        if(isset($_POST["update_btn_user"]))
+                                        if(isset($_POST["update_btn_comapny"]))
                                         {
                                             $role = $_POST["role"];
                                             $name = $_POST["name"];
@@ -111,7 +111,7 @@ require_once("header.php");
                                             {
                                                 ?>
                                                     <script>
-                                                        alert("Record has been updated");window.location.href = "manage_users.php";
+                                                        alert("Record has been updated");window.location.href = "manage_company.php";
                                                     </script>
                                                 <?php
                                             }
