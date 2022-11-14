@@ -70,7 +70,7 @@ require_once("header.php");
                                                                     <td>
                                                                         <div class="btn-list">
                                                                             <a href="edit_job.php?id='.$rec['cat_id'].'"><button id="bEdit" type="button" class="btn btn-sm btn-primary"><span class="fa fa-edit"></span></button></a>
-                                                                            <a href="delete_skill.php?id='.$rec['cat_id'].'"><button id="bDelete" type="button" class="btn btn-sm btn-primary" onclick="ConfirmDelete()"><span class="fa fa-trash"></span></button></a>
+                                                                            <a href="delete_job.php?id='.$rec['cat_id'].'"><button id="bDelete" type="button" class="btn btn-sm btn-primary" onclick="ConfirmDelete()"><span class="fa fa-trash"></span></button></a>
                                                                         </div>
                                                                     </td>
                                                                 </tr>';

@@ -55,7 +55,7 @@ require_once("header.php");
                                                     </div>
                                                     <div class="col-xl-12 mb-3">
                                                         <label for="validationDefault01">Job Image</label>
-                                                        <input type="file" class="form-control" name="job_image" id="validationDefault01" value="<?php echo "$rec[cat_image]" ?>">
+                                                        <input type="file" class="form-control" name="job_image" id="validationDefault01" value="<?php echo "$rec[cat_image]" ?>" required>
                                                     </div>
                                                 </div>
                                                 <button class="btn btn-primary" type="submit" name="update_btn_job">Update </button>
