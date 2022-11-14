@@ -842,6 +842,9 @@
                             <li class="slide">
                                 <a class="side-menu__item" href="add_skills.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Add Skills</span></a>
                             </li>
+                            <li class="slide">
+                                <a class="side-menu__item" href="add_jobs.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Add Jobs</span></a>
+                            </li>
 
                             
                              <li class="sub-category">

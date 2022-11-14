@@ -152,4 +152,70 @@
 
 
 
+     // add_jobs_btn.php
+
+     if(isset($_POST["add_jobs_btn"]))
+     {
+            $job_name = $_POST["job_name"];
+
+            $target_dir = "../upload/";
+            $job_image = $_FILES['job_image']['name'];
+            $target_file = $target_dir . basename($job_image);
+            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+            $filewithnewname = date("Ymdis")."CAT.".$imageFileType;
+
+            $image_size = $_FILES['job_image']['size'];
+            $image_type = $_FILES['job_image']['type'];
+            $image_tmp = $_FILES['job_image']['tmp_name'];
+        
+
+            if($image_size <= 5000000) /*image 5mb*/
+            {
+                if(strtolower($image_type) == "image/jpg" || strtolower($image_type) == "image/jpeg" || strtolower($image_type) == "image/png" || strtolower($image_type) == "image/jfif")
+                {
+
+                    $insert = "INSERT INTO `categories`(`cat_name`, `cat_image`) VALUES ('$job_name','$filewithnewname')";
+                    $excec = mysqli_query($conn,$insert);
+                    if($excec)
+                    {
+                        move_uploaded_file($image_tmp,$target_dir.$filewithnewname);
+                        ?>
+                            <script>
+                                alert("Record has been Inserted");
+                                window.location.href = "../add_jobs.php";
+                            </script>
+                        <?php
+                    }
+                    else
+                    {
+                        echo mysqli_error($conn);
+                    }
+
+                }
+                else
+                {
+                    ?>
+                    <script>
+                        alert("Failed || Image type should be jpg, jpeg, jfif and png");
+                        window.location.href = "../add_jobs.php";
+                    </script>
+                    <?php
+                }
+
+            }
+            else
+            {
+                ?>
+                <script>
+                    alert("Failed || Image size should be less than or equal to 5mb");
+                    window.location.href = "../add_jobs.php";
+                </script>
+                <?php
+            }
+         
+ 
+     }
+
+
+
 ?>
