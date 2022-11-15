@@ -865,6 +865,9 @@
                             <li class="slide">
                                 <a class="side-menu__item" href="manage_jobs.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Manage Jobs</span></a>
                             </li>
+                            <li class="slide">
+                                <a class="side-menu__item" href="manage_posts.php"><i class="side-menu__icon fa fa-user"></i><span class="side-menu__label">Manage Posts</span></a>
+                            </li>
 
 
                              <!-- my list -->
